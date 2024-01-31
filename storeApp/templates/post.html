@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+	<title>表單傳送範例</title>
+{% endblock %}
+
+{% block content %}
+	<form action="/post/" method="POST" name="form1" enctype="multipart/form-data">
+		{% csrf_token %}
+		<div class="container">
+			<div class="box">
+				</br>
+				<div><input type="file" id="input" name="myvalue" />
+				<input type="submit" value="送出" /></div>  
+				</br>
+				<div class="image_show_box" id="showImage" ></div>
+				<script src="{% static 'showImage.js' %}"></script>
+			</div>
+			<div class="box">
+				<h3>辨識結果 : {{result}}</h3>
+				<img src="{% static "images/test.jpg" %}" width="320" height="320" />	
+			</div>	
+		</div>		
+	</form>	
+{% endblock %}

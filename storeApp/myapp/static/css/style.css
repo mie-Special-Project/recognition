@@ -1,0 +1,15 @@
+.container {
+    display: flex; 
+    justify-content: center;}
+    
+.box {
+    width: 400px; 
+    height: 400px; 
+    margin-right: 100px; 
+}
+
+.image_show_box {
+    width : 320px; 
+    height : 320px; 
+    background-color : black;
+}
